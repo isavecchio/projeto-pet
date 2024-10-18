@@ -1,0 +1,142 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("../imagens/background3.png");
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(5px);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.cachorros {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.cartao-cachorro {
+    display: none;
+    max-width: 360px;
+    border-radius: 10px;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cartao-cachorro.aberto {
+    display: block;
+}
+
+.cartao-cachorro img {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.cartao-cachorro .cartao-topo {
+    padding: 30px 40px 0;
+}
+
+.cartao-cachorro .nome {
+    margin-bottom: 5px;
+}
+
+.cartao-cachorro .tipo {
+    background-color: #FFFFFF;
+    font-size: 12px;
+    opacity: 0.7;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.cartao-cachorro .detalhes {
+    color: #FFFFFF;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-cachorro .cartao-informacoes {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 50px;
+    margin-top: -70px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.cartao-cachorro .cartao-informacoes h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #6b727a;
+}
+
+.cartao-cachorro .cartao-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 15px;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.tipo-macho {
+    background-color: #19c7fc;
+}
+
+.tipo-femea {
+    background-color: #e2a1cc;
+}
+
+.listagem {
+    max-width: 200px;
+
+}
+
+.listagem .cachorro img {
+    width: 25%;
+}
+
+.listagem .cachorro {
+    background-color: #6b727a;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    min-height: 70px;
+
+    transition: 0.15 ease-in-out;
+}
+
+    .listagem .cachorro:hover {
+        transform: scale(1.05);
+    }
+
+    .listagem .cachorro span {
+        padding-right: 20px;
+    }
+
+    .listagem .cachorro.ativo {
+        background-color: #fa6668;
+    }
+
+
