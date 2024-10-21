@@ -107,8 +107,11 @@ main {
 
 }
 
-.listagem .cachorro img {
-    width: 25%;
+.listagem {
+    max-width: 200px;
+    max-height: 600px;
+    overflow-y: scroll;   
+    padding: 15px;
 }
 
 .listagem .cachorro {
